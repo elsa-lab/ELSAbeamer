@@ -1,2 +1,1 @@
-# ELSAbeamer
-Typesetting slides for members of the ELSA Lab, National Tsing Hua University, Hsinchu, Taiwan
+One can access the output of this GitHub repo through `output.pdf`.
