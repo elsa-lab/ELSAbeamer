@@ -1,0 +1,279 @@
+\documentclass{ELSAbeamer}
+\usepackage[utf8]{inputenc}
+
+\usepackage{lipsum}
+\usepackage{listings}
+
+\title[ELSAbeamer]{How to Use the ELSAbeamer \LaTeX{} Class}
+\author[K.-Y. Chang]{Kuan-Yu Chang}
+\date[2021/06/14]{June 14, 2021}
+
+\begin{document}
+
+\makecover
+
+\section{Lists}
+
+\begin{frame}{Unordered Lists}
+\begin{columns}
+\column{.5\linewidth}
+\begin{itemize}
+    \item item1
+    \begin{itemize}
+        \item item1-1
+        \item item1-2
+        \item item1-3
+    \end{itemize}
+    \item item2
+    \begin{itemize}
+        \item item2-1
+        \item item2-2
+        \item item2-3
+    \end{itemize}
+    \item item3
+    \begin{itemize}
+        \item item3-1
+        \item item3-2
+        \item item3-3
+    \end{itemize}
+\end{itemize}
+
+\column{.5\linewidth}
+\begin{itemize} \itemsep2em
+    \item item4
+    \begin{itemize} \itemsep1em
+        \item item4-1
+        \item item4-2
+        \item item4-3
+    \end{itemize}
+    \item item5
+    \begin{itemize} \itemsep1em
+        \item item5-1
+        \item item5-2
+        \item item5-3
+    \end{itemize}
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Ordered lists}
+\begin{columns}
+\column{.5\linewidth}
+\begin{enumerate}
+    \item item1
+    \begin{enumerate}
+        \item item1-1
+        \item item1-2
+        \item item1-3
+    \end{enumerate}
+    \item item2
+    \begin{enumerate}
+        \item item2-1
+        \item item2-2
+        \item item2-3
+    \end{enumerate}
+    \item item3
+    \begin{enumerate}
+        \item item3-1
+        \item item3-2
+        \item item3-3
+    \end{enumerate}
+\end{enumerate}
+
+\column{.5\linewidth}
+\begin{enumerate} \itemsep2em
+    \setcounter{enumi}{3}
+    \item item4
+    \begin{enumerate} \itemsep1em
+        \item item4-1
+        \item item4-2
+        \item item4-3
+    \end{enumerate}
+    \item item5
+    \begin{enumerate} \itemsep1em
+        \item item5-1
+        \item item5-2
+        \item item5-3
+    \end{enumerate}
+\end{enumerate}
+\end{columns}
+\end{frame}
+
+\section{Structuring Elements}
+
+\begin{frame}{Text blocks}
+\framesubtitle{In plain, example, and \alert{alert} flavour}
+\alert{This text} is highlighted.
+
+\begin{block}{A plain block}
+    This is a plain block containing some \alert{highlighted text}.
+\end{block}
+
+\begin{exampleblock}{An example block}
+    This is an example block containing some \alert{highlighted text}.
+\end{exampleblock}
+
+\begin{alertblock}{An alert block}
+    This is an alert block containing some \alert{highlighted text}.
+\end{alertblock}
+\end{frame}
+
+ \begin{frame}[label=proof]{Definitions, theorems, and proofs}
+\framesubtitle{All integers divide zero}
+\begin{definition}
+    $\forall a,b\in\mathbb{Z}: a\mid b\iff\exists c\in\mathbb{Z}:a\cdot c=b$
+\end{definition}
+
+\begin{theorem}
+    $\forall a\in\mathbb{Z}: a\mid 0$
+\end{theorem}
+
+\begin{proof}
+    $\forall a\in\mathbb{Z}: a\cdot 0=0$
+\end{proof}
+\end{frame}
+
+\section{Numerals and Mathematics}
+
+\begin{frame}{Numerals and Mathematics}
+\framesubtitle{Formulae, equations, and expressions}
+\begin{columns}
+\column{.20\linewidth}
+1234567890
+
+\column{.20\linewidth}
+\oldstylenums{1234567890}
+
+\column{.25\linewidth}
+$\hat{x}$, $\check{x}$, $\tilde{a}$, $\bar{a}$, $\dot{y}$, $\ddot{y}$
+
+\column{.35\linewidth}
+$\iint f(x,y,z)\,\mathsf{d}x\mathsf{d}y\mathsf{d}z$
+\end{columns}
+
+\begin{columns}
+\column{.5\linewidth}
+\begin{equation*}
+    \frac{1}{\displaystyle 1+
+            \frac{1}{\displaystyle 2+
+            \frac{1}{\displaystyle 3+x}}} +
+            \frac{1}{1+\frac{1}{2+\frac{1}{3+x}}}
+\end{equation*}
+
+\column{.5\linewidth}
+\begin{equation*}
+    F:\left| \begin{array}{ccc}
+          F''_{xx} & F''_{xy} &  F'_x \\
+          F''_{yx} & F''_{yy} &  F'_y \\
+          F'_x     & F'_y     & 0
+          \end{array}\right| = 0
+\end{equation*}
+\end{columns}
+
+\begin{columns}
+\column{.3\linewidth}
+\begin{equation*}
+    \iint_{\mathbf{x} \in \mathbb{R}^2} \langle \mathbf{x},\mathbf{y}\rangle\,\mathsf{d}\mathbf{x}
+\end{equation*}
+
+\column{.33\linewidth}
+\begin{equation*}
+    \overline{\overline{a\alpha}^2+\underline{b\beta}
+          +\overline{\overline{d\delta}}}
+\end{equation*}
+
+\column{.37\linewidth}
+\begin{equation*}
+    \left] 0,1\right[ + \lceil x \rfloor - \langle x,y\rangle
+\end{equation*}
+\end{columns}
+
+\begin{columns}
+\column{.4\linewidth}
+\begin{eqnarray*}
+    e^x &\approx& 1+x+x^2/2! + \\
+        && {}+x^3/3! + x^4/4!
+\end{eqnarray*}
+
+\column{.6\linewidth}
+\begin{equation*}
+    \binom{n+1}{k} = \binom{n}{k} + \binom{n}{k-1}
+\end{equation*}
+\end{columns}
+\end{frame}
+
+\section{Tables, Figures, and Code listlings}
+
+\subsection{Tables}
+
+\begin{frame}{An example table}
+\begin{table}[t]
+    \begin{tabular}{ccr}
+        \toprule
+        First Name & Last Name & Date of Birth \\
+        \midrule
+        John    & Doe       & 3/12/1920 \\
+        Peter   & Smith     & 6/5/1967 \\
+        Julia   & Jones     & 9/26/1977 \\
+        Jane    & Miller    & 10/5/1966 \\
+        Peter   & Smith     & 1/3/1901 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Personal data.}
+\end{table}
+\end{frame}
+
+\subsection{Figures}
+
+\begin{frame}{Dummy Text}
+\begin{columns}
+\column{.6\linewidth} \justifying
+\scriptsize \lipsum[1]
+
+\column{.4\linewidth}
+\begin{figure}
+    \centering
+     \includegraphics[width=.8\linewidth]{example-image-a}
+     \caption{An example image.}
+\end{figure}
+\end{columns}
+\end{frame}
+
+\subsection{Code listlings}
+
+\defverbatim[colored]\sleepSort{
+\begin{lstlisting}[language=C,tabsize=2]
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+int main(int argc, char **argv) {
+    while (--c > 1 && !fork());
+    sleep(c = atoi(v[c]));
+    printf("%d\n", c);
+    wait(0);
+    return 0;
+}
+\end{lstlisting}}
+\begin{frame}{An example source code in C}
+\sleepSort
+\end{frame}
+
+\section{Citations and Bibliography}
+
+\begin{frame}{\TeX, \LaTeX, and Beamer} \justifying
+\TeX\ is a programming language for the typesetting of documents. It was created by Donald Erwin Knuth in the late 1970s and it is documented in \emph{The \TeX book}~\cite{knuth1984texbook}.
+
+\bigskip
+
+In the early 1980s, Leslie Lamport created the initial version of \LaTeX, a high-level language on top of \TeX, which is documented in \emph{\LaTeX{}: A Document Preparation System}~\cite{lamport1994latex}. There exists a healthy ecosystem of packages that extend the base functionality of \LaTeX; \emph{The \LaTeX{} Companion}~\cite{mittelbach2004latex} acts as a guide through the ecosystem.
+
+\bigskip
+
+In 2003, Till Tantau created the initial version of Beamer, a \LaTeX{} package for the creation of presentations. Beamer is documented in the \emph{User's Guide to the Beamer Class}~\cite{tantau2004user}.
+\end{frame}
+
+\makebib{references}
+
+\end{document}
