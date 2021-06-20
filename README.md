@@ -32,3 +32,7 @@ Follow the steps to prepare your presentation easily, and we also provide a mini
 - Watermark logo of ELSA Lab on each page
 
 ![Example cover](https://i.imgur.com/CDktRUI.png)
+
+## Reference
+
+- [View this project on ELSA LaTeX](https://elsa-latex.cs.nthu.edu.tw/read/qmwwkmtxbpkt)
