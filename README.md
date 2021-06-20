@@ -11,10 +11,8 @@ Follow the steps to prepare your presentation easily, and we also provide a mini
 
 ### Minimal Working Example
 
-```latex=
+```latex
 \documentclass{ELSAbeamer}
-
-\usepackage{lipsum}
 
 \title[Short Title]{An Awesome Title}
 \author[Short Name]{Your Name}
