@@ -1,16 +1,16 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ELSAbeamer}[June, 2021 v1.0 Typesetting slides for members of the ELSA Lab, National Tsing Hua University, Hsinchu, Taiwan]
+\ProvidesClass{ELSAbeamer}[June, 2021 v1.0
+    Typesetting slides for members of the ELSA Lab,
+    National Tsing Hua University, Hsinchu, Taiwan]
 
 \LoadClass{beamer}
 \usetheme{/themeELSA}
 
 %%% Required packages %%%
 
-\RequirePackage[numbers,square,sort&compress]{natbib}
 \RequirePackage{transparent}
-\RequirePackage{caption}
-\RequirePackage{ragged2e}
-\RequirePackage{booktabs}
+\RequirePackage[square,comma,numbers,
+    sort&compress]{natbib}
 
 %%% Institute Name %%%
 
@@ -20,7 +20,9 @@
 
 %%% Watermarking Logo %%%
 
-\logo{\transparent{0.4}\includegraphics[height=1.5cm]{beamertheme/elsa-logo.png}}
+\logo{\transparent{0.4}%
+    \includegraphics[height=1.5cm]{%
+        beamertheme/elsa-logo.png}}
 
 %%% Customization %%%
 
@@ -54,7 +56,8 @@
 
 % Numbered entries in the bibliography
 % https://tex.stackexchange.com/a/124271
-\setbeamertemplate{bibliography item}{\insertbiblabel}
+\setbeamertemplate{bibliography item}{%
+    \insertbiblabel}
 
 % Create the title page and the outline
 \newcommand{\makecover}{
@@ -67,7 +70,8 @@
 \end{frame}
 }
 
-% Ways to avoid 'Package hyperref Warning: Token not allowed in a PDF string' warning
+% Ways to avoid 'Package hyperref Warning:
+%   Token not allowed in a PDF string' warning
 % https://tex.stackexchange.com/a/248009
 \makeatletter
 \newcommand*{\bkmtranslateto}{\languagename}
@@ -78,7 +82,8 @@
     #1%
   \fi
 }
-\pdfstringdefDisableCommands{\let\translate\bkmtranslate}
+\pdfstringdefDisableCommands{%
+    \let\translate\bkmtranslate}
 \makeatother
 
 % Create pages for bibliography
@@ -91,9 +96,10 @@
     % https://tex.stackexchange.com/a/276020
     \begingroup
     \setbeamertemplate{footline}{}
-    \begin{frame}[t, allowframebreaks, noframenumbering]{Bibliography}
+    \begin{frame}[t, allowframebreaks,% 
+        noframenumbering]{Bibliography}
     \scriptsize
-    \bibliographystyle{ieeetr}
+    \bibliographystyle{IEEEtran}
     \bibliography{#1}
     \end{frame}
     \endgroup
